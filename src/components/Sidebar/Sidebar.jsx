@@ -19,7 +19,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       <div className="sidebar-right">
         <a href="#">Dashboard</a>
         <a href="#">Profile</a>
-        <a href="#">Foods</a>
+        <a href="#">Products</a>
       </div>
     </div>
   );
