@@ -1,0 +1,137 @@
+/* Sidebar */
+.sidebar {
+  height: 100vh;
+  width: 18%;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0; /* Default top position */
+  bottom: 0;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Adjust Sidebar for Small Screens */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 250px;
+    transform: translateX(-100%);
+    top: 60px; /* Moves below navbar only on small screens */
+    height: calc(100vh - 60px); /* Adjust height accordingly */
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* Sidebar Top */
+.sidebar-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Logo */
+.logo {
+  width: 90px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Close Button (Hidden by default) */
+.close-icon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s, color 0.3s;
+  display: none; /* Hidden by default */
+}
+
+/* Show Close Button Only for Small Screens */
+@media (max-width: 900px) {
+  .close-icon {
+    display: block;
+  }
+}
+
+.close-icon:hover {
+  transform: scale(1.1);
+  color: #ff5e5e;
+}
+
+/* Sidebar Links */
+.sidebar-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.sidebar-right a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 12px 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar-right a:hover {
+  background: #34495e;
+  transform: scale(1.05);
+}
+
+/* Menu Icon (Only appears when sidebar is closed on small screens) */
+.menu-button {
+  display: none;
+  position: fixed;
+  top: 70px; /* Adjusted to appear below navbar */
+  left: 20px;
+  background: #2c3e50;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1100;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Show Menu Button Only for Small Screens */
+@media (max-width: 900px) {
+  .menu-button {
+    display: block;
+    top: 80px; /* Extra padding so it doesn't overlap */
+  }
+}
+
+/* Hide Menu Button When Sidebar is Open */
+@media (max-width: 900px) {
+  .sidebar.open + .menu-button {
+    display: none;
+  }
+}
+
+.menu-button:hover {
+  background: #1a252f;
+  transform: scale(1.05);
+}

@@ -1,0 +1,17 @@
+.dashboard {
+    width: 85%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    float: right;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 15%;
+}
+
+@media (max-width: 900px) {
+    .dashboard{
+        width: 100%;
+    }
+}

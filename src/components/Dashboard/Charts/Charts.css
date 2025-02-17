@@ -1,0 +1,118 @@
+.charts-container {
+    display: flex;
+    flex-direction: column; /* Stacks graph, pie chart, and table vertically */
+    align-items: center;
+    padding: 80px 20px 20px;
+    width: 75%;
+    margin-left: 18%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    gap: 20px; /* Adds space between elements */
+    margin-top: 150px;
+  }
+  
+  /* Product Table */
+  .product-table-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .product-table-container h2 {
+    margin-bottom: 10px;
+  }
+  
+  .products-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .products-table th,
+  .products-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .products-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .view-graph-btn {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .view-graph-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Charts */
+  .chart {
+    flex: 1;
+    width: 90%; /* Increased width for better visibility */
+    max-width: 700px; /* Reduced max-width */
+    padding: 15px; /* Slightly reduced padding */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chart h3 {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .charts-container {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .chart {
+      width: 90%;
+      min-width: 300px;
+    }
+  
+    .products-table {
+      font-size: 14px;
+    }
+  
+    .product-image {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .view-graph-btn {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  }
+
+  @media (max-width : 450px){
+    .charts-container{
+      margin-top: 180px;
+    }
+  }
+  
